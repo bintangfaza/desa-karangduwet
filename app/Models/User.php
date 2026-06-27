@@ -9,8 +9,9 @@ use Illuminate\Database\Eloquent\Attributes\Hidden;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
-#[Fillable(['nama','username', 'email', 'password'])]
+#[Fillable(['nama', 'username', 'email', 'password'])]
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable
 {
@@ -28,5 +29,25 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function berita(): HasMany
+    {
+        return $this->hasMany(Berita::class);
+    }
+
+    public function potensiDesa(): HasMany
+    {
+        return $this->hasMany(PotensiDesa::class);
+    }
+
+    public function produkDesa(): HasMany
+    {
+        return $this->hasMany(ProdukDesa::class);
+    }
+
+    public function albumGaleri(): HasMany
+    {
+        return $this->hasMany(AlbumGaleri::class);
     }
 }
