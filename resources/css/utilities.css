@@ -1,0 +1,23 @@
+.shadow-custom{
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.rounded-custom{
+
+    border-radius:var(--radius-md);
+
+}
+
+.bg-primary-custom{
+
+    background:var(--primary);
+
+}
+
+.transition{
+
+    transition:var(--transition);
+
+}

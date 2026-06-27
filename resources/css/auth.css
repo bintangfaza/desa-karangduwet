@@ -1,0 +1,35 @@
+.auth-page{
+
+    min-height:100vh;
+
+    background:#f5f7fa;
+
+}
+
+.auth-card{
+
+    border:none;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow-md);
+
+}
+
+.auth-title{
+
+    font-weight:700;
+
+}
+
+.auth-btn{
+
+    transition:var(--transition);
+
+}
+
+.auth-btn:hover{
+
+    transform:translateY(-2px);
+
+}

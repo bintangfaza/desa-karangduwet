@@ -1,0 +1,61 @@
+:root{
+
+    /* ==========================
+        COLOR
+    =========================== */
+
+    --primary:#198754;
+    --primary-hover:#157347;
+
+    --secondary:#6c757d;
+
+    --success:#198754;
+
+    --danger:#dc3545;
+
+    --warning:#ffc107;
+
+    --light:#f8f9fa;
+
+    --dark:#212529;
+
+    --white:#ffffff;
+
+    --border:#dee2e6;
+
+    /* ==========================
+        FONT
+    =========================== */
+
+    --font-family:"Poppins",sans-serif;
+
+    /* ==========================
+        RADIUS
+    =========================== */
+
+    --radius-sm:8px;
+
+    --radius-md:15px;
+
+    --radius-lg:25px;
+
+    /* ==========================
+        SHADOW
+    =========================== */
+
+    --shadow-sm:
+        0 2px 10px rgba(0,0,0,.05);
+
+    --shadow-md:
+        0 8px 25px rgba(0,0,0,.08);
+
+    --shadow-lg:
+        0 15px 40px rgba(0,0,0,.15);
+
+    /* ==========================
+        TRANSITION
+    =========================== */
+
+    --transition:.3s ease;
+
+}
