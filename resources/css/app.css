@@ -7,8 +7,14 @@
 @import "./utilities.css";
 
 @import "./auth.css";
-@import "./dashboard.css";
 @import "./frontend.css";
+
+/* Dashboard Layout */
+@import "./dashboard/sidebar.css";
+@import "./dashboard/navbar.css";
+@import "./dashboard/maincontent.css";
+@import "./dashboard/footer.css";
+@import "./dashboard/responsive.css";
 
 /* ===========================
     LOGIN PAGE

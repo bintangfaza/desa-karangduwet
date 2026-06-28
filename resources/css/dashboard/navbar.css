@@ -1,0 +1,255 @@
+/* ===================================================
+                    NAVBAR
+=================================================== */
+
+.admin-navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    right:0;
+
+    height:80px;
+
+    background:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    box-shadow:0 2px 12px rgba(0,0,0,.06);
+
+    z-index:1100;
+
+}
+
+/* ============================= */
+
+.navbar-left{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+}
+
+.navbar-logo{
+
+    width:46px;
+
+    height:46px;
+
+    object-fit:contain;
+
+}
+
+.navbar-brand h4{
+
+    margin:0;
+
+    font-size:28px;
+
+    font-weight:700;
+
+}
+
+.navbar-brand small{
+
+    color:#777;
+
+}
+
+/* ============================= */
+
+.navbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.navbar-right i{
+
+    font-size:42px;
+
+    color:#198754;
+
+}
+
+.navbar-user{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.navbar-user strong{
+
+    font-size:18px;
+
+}
+
+.navbar-user span{
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+/* ===================================================
+                    TOGGLE
+=================================================== */
+
+.toggle-btn{
+
+    width:46px;
+
+    height:46px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#F5F7FA;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.toggle-btn i{
+
+    font-size:24px;
+
+}
+
+.toggle-btn:hover{
+
+    background:#146C43;
+
+    color:#fff;
+
+}
+
+/* ===================================================
+                    PROFILE
+=================================================== */
+
+.navbar-right{
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+}
+
+.profile i{
+
+    font-size:42px;
+
+    color:#198754;
+
+}
+
+.profile h6{
+
+    margin:0;
+
+    font-weight:600;
+
+    font-size:16px;
+
+}
+
+.profile small{
+
+    color:#7b8794;
+
+}
+
+/* ===================================================
+                    BREADCRUMB
+=================================================== */
+
+.navbar-breadcrumb{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-left:8px;
+
+}
+
+.breadcrumb{
+
+    margin:0;
+
+    background:transparent;
+
+    padding:0;
+
+}
+
+.breadcrumb-item{
+
+    font-size:15px;
+
+    font-weight:500;
+
+}
+
+.breadcrumb-item a{
+
+    text-decoration:none;
+
+    color:#6c757d;
+
+    transition:.2s;
+
+}
+
+.breadcrumb-item a:hover{
+
+    color:#146C43;
+
+}
+
+.breadcrumb-item.active{
+
+    color:#212529;
+
+    font-weight:600;
+
+}
+
+.breadcrumb-item + .breadcrumb-item::before{
+
+    color:#adb5bd;
+
+}

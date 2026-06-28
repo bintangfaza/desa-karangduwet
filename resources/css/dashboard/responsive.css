@@ -1,0 +1,164 @@
+/* ===================================================
+                LARGE DEVICE
+        (Laptop 1200px ke bawah)
+=================================================== */
+
+@media (max-width:1200px){
+
+    .content-wrapper{
+
+        padding:30px;
+
+    }
+
+    .dashboard-header{
+
+        gap:20px;
+
+    }
+
+    .stats-card{
+
+        padding:20px;
+
+    }
+
+    .stats-content h2{
+
+        font-size:30px;
+
+    }
+
+    .content-card{
+
+        padding:20px;
+
+    }
+
+}
+
+
+/* ===================================================
+                TABLET
+        (992px ke bawah)
+=================================================== */
+
+@media (max-width:992px){
+
+    /* =========================
+            SIDEBAR
+    ========================= */
+
+    .sidebar{
+
+        left:-270px;
+
+        width:270px;
+
+        transition:left .3s ease;
+
+    }
+
+    .sidebar.show{
+
+        left:0;
+
+    }
+
+    .sidebar.collapsed{
+
+        width:270px;
+
+    }
+
+    /* =========================
+            OVERLAY
+    ========================= */
+
+    .sidebar-overlay{
+
+        position:fixed;
+
+        inset:0;
+
+        background:rgba(0,0,0,.45);
+
+        opacity:0;
+
+        visibility:hidden;
+
+        transition:.3s;
+
+        z-index:1040;
+
+    }
+
+    .sidebar-overlay.show{
+
+        opacity:1;
+
+        visibility:visible;
+
+    }
+
+    /* =========================
+            MAIN CONTENT
+    ========================= */
+
+    .main-content{
+
+        margin-left:0;
+
+    }
+
+    .main-content.collapsed{
+
+        margin-left:0;
+
+    }
+
+    .content-wrapper{
+
+        padding:25px;
+
+    }
+
+    /* =========================
+            DASHBOARD
+    ========================= */
+
+    .dashboard-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:20px;
+
+    }
+
+    .dashboard-date{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    /* =========================
+            CHART
+    ========================= */
+
+    .content-card{
+
+        height:auto;
+
+    }
+
+    #dashboardChart{
+
+        height:260px !important;
+
+    }
+
+}
