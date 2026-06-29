@@ -16,7 +16,11 @@
 @import "./dashboard/footer.css";
 @import "./dashboard/responsive.css";
 
-/* ===========================
+/* Britan Admin */
+@import "./dashboard/berita.css";
+@import "./dashboard/berita-form.css";
+
+/* ==========================
     LOGIN PAGE
 =========================== */
 

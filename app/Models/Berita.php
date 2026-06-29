@@ -16,6 +16,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 'views',
 'status',
 ])]
+
 class Berita extends Model
 {
     protected $table = 'berita';

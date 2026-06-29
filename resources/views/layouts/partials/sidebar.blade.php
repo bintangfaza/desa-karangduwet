@@ -20,7 +20,7 @@
 
             </a>
 
-            <a href="#"
+            <a href="{{ route('berita.index') }}"
                 class="menu-item"
                 data-title="Berita">
 
@@ -69,8 +69,8 @@
 
 
         {{-- =========================
-            FOOTER
-    ========================== --}}
+                     FOOTER
+        ========================== --}}
         <div class="sidebar-footer">
 
             <form

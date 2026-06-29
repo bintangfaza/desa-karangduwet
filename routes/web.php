@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Admin\BeritaController;
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -24,4 +26,9 @@ Route::middleware('auth')->group(function () {
 
     Route::post('/logout', [AuthController::class, 'destroy'])
         ->name('logout');
+
+    Route::resource('berita', BeritaController::class)
+    ->parameter('berita', 'berita');
 });
+
+// Routing fitur admin

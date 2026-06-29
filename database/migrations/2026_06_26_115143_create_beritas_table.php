@@ -20,11 +20,11 @@ return new class extends Migration
 
             $table->string('judul');
             $table->string('slug')->unique();
-            $table->string('gambar', 255);
+            $table->string('gambar')->nullable();
             $table->longText('isi');
             $table->integer('views')->default(0);
             $table->enum('status', ['draft', 'publish'])->default('draft');
-
+            $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });
     }
