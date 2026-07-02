@@ -14,14 +14,30 @@ class BeritaController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $beritas = Berita::with('user')
+        $query = Berita::with('user');
+
+        // Search judul
+        if ($request->filled('search')) {
+
+            $query->where('judul', 'like', '%' . $request->search . '%');
+        }
+
+        // Filter status
+        if ($request->filled('status')) {
+
+            $query->where('status', $request->status);
+        }
+
+        $beritas = $query
             ->latest()
-            ->paginate(10);
+            ->paginate(10)
+            ->withQueryString();
 
         return view('admin.berita.index', compact('beritas'));
     }
+
 
     /**
      * Show the form for creating a new resource.

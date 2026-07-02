@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Admin\BeritaController;
+use App\Http\Controllers\Admin\PotensiDesaController;
+use App\Http\Controllers\Admin\KategoriPotensiController;
 
 
 Route::get('/', function () {
@@ -29,6 +31,13 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('berita', BeritaController::class)
     ->parameter('berita', 'berita');
+
+    Route::resource('potensi-desa', PotensiDesaController::class);
+
+    Route::resource('kategori-potensi', KategoriPotensiController::class)
+    ->parameters([
+        'kategori-potensi' => 'kategoriPotensi'
+    ]);
 });
 
 // Routing fitur admin

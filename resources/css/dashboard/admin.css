@@ -1,0 +1,207 @@
+/* ===================================
+   PAGE HEADER
+=================================== */
+
+.page-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:1rem;
+    margin-bottom:2rem;
+}
+
+.page-header h2{
+    margin:0;
+    font-size:2rem;
+    font-weight:700;
+    color:#1f2937;
+}
+
+.page-header p{
+    margin-top:.4rem;
+    color:#6b7280;
+}
+
+.header-action{
+    display:flex;
+    gap:12px;
+    align-items:center;
+}
+
+@media (max-width:768px){
+
+    .header-action{
+        width:100%;
+        margin-top:15px;
+        flex-direction:column;
+    }
+
+    .header-action .btn{
+        width:100%;
+    }
+
+}
+
+/* ===================================
+   TOOLBAR
+=================================== */
+
+.table-toolbar form{
+    display:flex;
+    gap:1rem;
+    align-items:flex-end;
+}
+
+.toolbar-search{
+    flex:1;
+}
+
+.toolbar-filter{
+    width:260px;
+}
+
+.table-toolbar .btn{
+    height:48px;
+    min-width:130px;
+}
+
+.table-toolbar .form-control,
+.table-toolbar .form-select{
+    height:48px;
+}
+
+
+/* ===================================
+   TOOLBAR
+=================================== */
+
+.table-toolbar{
+    background:#fff;
+    padding:1.5rem;
+    border-radius:18px;
+    margin-bottom:1.75rem;
+    box-shadow:0 6px 18px rgba(0,0,0,.05);
+}
+
+.table-toolbar form{
+    display:flex;
+    align-items:flex-end;
+    gap:1rem;
+}
+
+.toolbar-search{
+    flex:1;
+}
+
+.toolbar-filter{
+    width:240px;
+}
+
+.table-toolbar .form-control,
+.table-toolbar .form-select,
+.table-toolbar .btn{
+    height:48px;
+}
+
+.table-toolbar .btn{
+    min-width:120px;
+}
+
+@media(max-width:768px){
+
+    .table-toolbar form{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .toolbar-search,
+    .toolbar-filter{
+        width:100%;
+    }
+
+    .table-toolbar .btn{
+        width:100%;
+    }
+
+}
+/* ===================================
+   TABLE IMAGE
+=================================== */
+
+.table-image{
+    width:90px;
+    height:70px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+/* ===================================
+   ACTION BUTTON
+=================================== */
+
+.action-group{
+    display:flex;
+    gap:.5rem;
+}
+
+.btn-action{
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.btn-edit{
+    background:#dff3e4;
+    color:#198754;
+}
+
+.btn-edit:hover{
+    background:#198754;
+    color:#fff;
+}
+
+/* ===================================
+   EMPTY DATA
+=================================== */
+
+.empty-data{
+    text-align:center;
+    padding:4rem 1rem;
+}
+
+.empty-data i{
+    font-size:4rem;
+    color:#198754;
+    margin-bottom:1rem;
+}
+
+.empty-data h5{
+    font-weight:700;
+}
+
+.empty-data p{
+    color:#6c757d;
+}
+
+/* ===================================
+   PAGINATION
+=================================== */
+
+.pagination{
+    margin-bottom:0;
+}
+
+.page-link{
+    color:#198754;
+}
+
+.page-item.active .page-link{
+    background:#198754;
+    border-color:#198754;
+}
+

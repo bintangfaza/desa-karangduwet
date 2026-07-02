@@ -6,20 +6,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const overlay = document.getElementById("sidebarOverlay");
     const icon = document.getElementById("toggleIcon");
 
-    function closeMobileSidebar(){
+    function closeMobileSidebar() {
 
         sidebar.classList.remove("show");
         overlay.classList.remove("show");
 
         document.body.classList.remove("overflow-hidden");
 
-        icon.className="bi bi-list";
+        icon.className = "bi bi-list";
 
     }
 
-    toggle.addEventListener("click",()=>{
+    toggle.addEventListener("click", () => {
 
-        if(window.innerWidth>992){
+        if (window.innerWidth > 992) {
 
             sidebar.classList.toggle("collapsed");
 
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
 
-        else{
+        else {
 
             sidebar.classList.toggle("show");
 
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             document.body.classList.toggle("overflow-hidden");
 
-            icon.className=sidebar.classList.contains("show")
+            icon.className = sidebar.classList.contains("show")
                 ? "bi bi-x-lg"
                 : "bi bi-list";
 
@@ -43,11 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    overlay.addEventListener("click",closeMobileSidebar);
+    overlay.addEventListener("click", closeMobileSidebar);
 
-    window.addEventListener("resize",()=>{
+    window.addEventListener("resize", () => {
 
-        if(window.innerWidth>992){
+        if (window.innerWidth > 992) {
 
             closeMobileSidebar();
 
@@ -56,3 +56,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
