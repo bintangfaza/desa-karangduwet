@@ -37,7 +37,7 @@
             <span>Potensi Desa</span>
 
         </a>
-        <a href="#"
+        <a href="{{ route('produk-desa.index') }}"
             class="menu-item"
             data-title="Produk Desa">
 
@@ -46,7 +46,7 @@
 
         </a>
 
-        <a href="#"
+        <a href="{{ route('album-galeri.index') }}"
             class="menu-item"
             data-title="Galeri">
 

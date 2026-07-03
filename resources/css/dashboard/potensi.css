@@ -13,12 +13,4 @@
     font-weight:600;
 
 }
- /* kategori */
-.kategori-panel{
-    display:none;
-    margin-top:2rem;
-}
-
-.kategori-panel.show{
-    display:block;
-}
+ 
