@@ -1,0 +1,100 @@
+/* ===========================
+        NAVBAR
+=========================== */
+
+.navbar-custom{
+    padding:18px 0;
+    background:transparent;
+    transition:all .3s ease;
+    z-index:999;
+}
+
+.navbar-custom.scrolled{
+    background:rgba(255,255,255,.94);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ===========================
+        BRAND
+=========================== */
+
+.navbar-brand{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    color:#fff;
+    font-weight:700;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.logo{
+    width:46px;
+}
+
+.navbar-custom.scrolled .navbar-brand{
+    color:#222;
+}
+
+/* ===========================
+        MENU
+=========================== */
+.navbar-nav{
+    gap:10px;
+}
+
+.nav-link{
+    position:relative;
+    color:#fff;
+    font-weight:500;
+    transition:.3s;
+}
+
+.navbar-custom.scrolled .nav-link{
+    color:#444;
+}
+
+.nav-link:hover{
+    color:#198754;
+}
+
+.navbar-custom.scrolled .nav-link:hover{
+    color:#198754;
+}
+
+/* Underline */
+
+.nav-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0;
+    height:2px;
+    background:#198754;
+    transition:.3s;
+}
+
+.nav-link:hover::after{
+    width:100%;
+}
+
+/* ===========================
+        TOGGLER
+=========================== */
+
+.navbar-toggler{
+    border:none;
+    box-shadow:none;
+}
+
+.navbar-toggler i{
+    color:#fff;
+    font-size:30px;
+}
+
+.navbar-custom.scrolled .navbar-toggler i{
+    color:#222;
+}

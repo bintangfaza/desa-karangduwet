@@ -9,6 +9,10 @@ use App\Http\Controllers\Admin\ProdukDesaController;
 use App\Http\Controllers\Admin\KategoriProdukController;
 use App\Http\Controllers\Admin\AlbumGaleriController;
 use App\Http\Controllers\Admin\GaleriController;
+use App\Http\Controllers\Admin\AnggotaKknController;
+use App\Http\Controllers\Admin\ProgramKerjaController;
+
+
 
 
 Route::get('/', function () {
@@ -67,4 +71,14 @@ Route::middleware('auth')->group(function () {
         'galeri/{galeri}',
         [GaleriController::class, 'destroy']
     )->name('galeri.destroy');
+
+    Route::resource(
+        'anggota-kkn',
+        AnggotaKknController::class
+    );
+    
+    Route::resource(
+    'anggota-kkn.program-kerja',
+    ProgramKerjaController::class
+);
 });

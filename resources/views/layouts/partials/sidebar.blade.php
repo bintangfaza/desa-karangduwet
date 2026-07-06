@@ -4,8 +4,6 @@
             MENU
     ========================== --}}
     <div class="sidebar-menu">
-
-
         <div class="sidebar-title">
             MENU UTAMA
         </div>
@@ -62,6 +60,12 @@
             <i class="bi bi-geo-alt"></i>
             <span>Lokasi Desa</span>
 
+        </a>
+        <a href="{{ route('anggota-kkn.index') }}"
+            class="menu-item"
+            data-title="Anggota KKN">
+            <i class="bi bi-people"></i>
+            <span>Anggota</span>
         </a>
 
     </div>

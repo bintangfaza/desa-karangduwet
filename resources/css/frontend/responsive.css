@@ -1,0 +1,40 @@
+@media(max-width:991px){
+    .navbar-collapse{
+        margin-top:20px;
+        background:#fff;
+        border-radius:20px;
+        padding:20px;
+        box-shadow:0 15px 40px rgba(0,0,0,.08);
+    }
+
+    .navbar-collapse .nav-link{
+        color:#444 !important;
+    }
+
+    .navbar-collapse .nav-link:hover{
+        color:#198754 !important;
+    }
+}
+
+@media(max-width:768px){
+    .footer{
+        text-align:center;
+    }
+
+    .footer-brand{
+        justify-content:center;
+    }
+
+    .footer-contact li{
+        justify-content:center;
+    }
+
+    .social-group{
+        justify-content:center;
+    }
+
+    .footer-bottom{
+        justify-content:center;
+        text-align:center;
+    }
+}
