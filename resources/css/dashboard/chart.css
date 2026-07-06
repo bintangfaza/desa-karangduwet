@@ -1,0 +1,275 @@
+/* ==========================================
+   Dashboard Chart
+========================================== */
+
+.dashboard-card {
+    background: #fff;
+    border-radius: 22px;
+    padding: 28px;
+    border: 1px solid #eef2f7;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, .05);
+}
+
+/* ==========================================
+   Header
+========================================== */
+
+.dashboard-card-header {
+    margin-bottom: 28px;
+}
+
+.dashboard-card-header h5 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.dashboard-card-header p {
+
+    margin-top: 10px;
+    margin-bottom: 0;
+
+    color: #64748b;
+    font-size: 15px;
+
+}
+
+/* ==========================================
+   Layout
+========================================== */
+
+.chart-wrapper {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+}
+
+/* ==========================================
+   Chart
+========================================== */
+
+.chart-canvas {
+
+    width: 280px;
+    height: 280px;
+
+    margin: auto;
+
+    flex-shrink: 0;
+
+}
+
+/* ==========================================
+   Legend
+========================================== */
+
+.chart-legend {
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+
+}
+
+.legend-item {
+
+    display: flex;
+    align-items: center;
+
+    padding: 14px 18px;
+
+    background: #f8fafc;
+
+    border-radius: 16px;
+
+    transition: .3s ease;
+
+    border: 1px solid transparent;
+
+}
+
+.legend-item:hover {
+
+    transform: translateX(6px);
+
+    background: #ffffff;
+
+    border-color: #e2e8f0;
+
+    box-shadow: 0 10px 24px rgba(15, 23, 42, .06);
+
+}
+
+/* ==========================================
+   Dot
+========================================== */
+
+.legend-color {
+
+    width: 14px;
+    height: 14px;
+
+    border-radius: 50%;
+
+    margin-right: 16px;
+
+    flex-shrink: 0;
+
+}
+
+/* ==========================================
+   Text
+========================================== */
+
+.legend-item span {
+
+    flex: 1;
+
+    font-size: 15px;
+    color: #475569;
+    font-weight: 500;
+
+}
+
+.legend-item strong {
+
+    font-size: 22px;
+    font-weight: 700;
+    color: #0f172a;
+
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:992px) {
+
+    .chart-wrapper {
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 35px;
+
+    }
+
+    .chart-canvas {
+
+        width: 240px;
+        height: 240px;
+
+    }
+
+    .chart-legend {
+
+        width: 100%;
+
+    }
+
+}
+
+@media(max-width:576px) {
+
+    .dashboard-card {
+
+        padding: 22px;
+
+    }
+
+    .dashboard-card-header h5 {
+
+        font-size: 24px;
+
+    }
+
+    .dashboard-card-header p {
+
+        font-size: 14px;
+
+    }
+
+    .legend-item {
+
+        padding: 12px 14px;
+
+    }
+
+    .legend-item strong {
+
+        font-size: 18px;
+
+    }
+
+}
+
+/* ==========================================
+   Total Data (Center)
+========================================== */
+
+.chart-canvas {
+
+    position: relative;
+
+}
+
+.chart-center {
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    pointer-events: none;
+
+}
+
+.chart-center h2 {
+
+    margin: 0;
+
+    font-size: 42px;
+
+    font-weight: 800;
+
+    color: #0f172a;
+
+    line-height: 1;
+
+}
+
+.chart-center span {
+
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: #64748b;
+
+}

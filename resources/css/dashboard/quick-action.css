@@ -1,0 +1,81 @@
+/* ==========================================
+   Quick Action
+========================================== */
+
+.quick-action-list{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+
+.quick-action-item{
+    display:flex;
+    align-items:center;
+    gap:16px;
+    padding:16px;
+    background:#fff;
+    border:1px solid #edf2f7;
+    border-radius:14px;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.quick-action-item:hover{
+    transform:translateY(-2px);
+    border-color:#16a34a;
+    box-shadow:0 8px 20px rgba(22,163,74,.08);
+}
+
+.quick-action-icon{
+    width:52px;
+    height:52px;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-shrink:0;
+}
+
+.quick-action-icon i{
+    font-size:20px;
+}
+
+.quick-action-content{
+    flex:1;
+}
+
+.quick-action-content h6{
+    margin:0;
+    color:#1e293b;
+    font-size:15px;
+    font-weight:700;
+}
+
+.quick-action-content p{
+    margin-top:4px;
+    margin-bottom:0;
+    color:#64748b;
+    font-size:13px;
+}
+
+.quick-arrow{
+    color:#cbd5e1;
+    font-size:18px;
+    transition:.25s;
+}
+
+.quick-action-item:hover .quick-arrow{
+    color:#16a34a;
+    transform:translateX(3px);
+}
+
+@media(max-width:768px){
+    .quick-action-item{
+        padding:14px;
+    }
+
+    .quick-action-icon{
+        width:46px;
+        height:46px;
+    }
+}

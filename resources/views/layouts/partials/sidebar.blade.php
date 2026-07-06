@@ -19,7 +19,7 @@
         </a>
 
         <a href="{{ route('berita.index') }}"
-            class="menu-item"
+            class="menu-item {{ request()->routeIs('berita.*') ? 'active' : '' }}"
             data-title="Berita">
 
             <i class="bi bi-newspaper"></i>
@@ -36,7 +36,7 @@
 
         </a>
         <a href="{{ route('produk-desa.index') }}"
-            class="menu-item"
+            class="menu-item {{ request()->routeIs('produk-desa.*') ? 'active' : '' }}"
             data-title="Produk Desa">
 
             <i class="bi bi-bag"></i>
@@ -45,7 +45,7 @@
         </a>
 
         <a href="{{ route('album-galeri.index') }}"
-            class="menu-item"
+            class="menu-item {{ request()->routeIs('album-galeri.*') ? 'active' : '' }}"
             data-title="Galeri">
 
             <i class="bi bi-images"></i>
@@ -54,7 +54,7 @@
         </a>
 
         <a href="#"
-            class="menu-item"
+            class="menu-item {{ request()->routeIs('lokasi-desa.*') ? 'active' : '' }}"
             data-title="Lokasi Desa">
 
             <i class="bi bi-geo-alt"></i>
@@ -62,7 +62,7 @@
 
         </a>
         <a href="{{ route('anggota-kkn.index') }}"
-            class="menu-item"
+            class="menu-item {{ request()->routeIs('anggota-kkn.*') ? 'active' : '' }}"
             data-title="Anggota KKN">
             <i class="bi bi-people"></i>
             <span>Anggota</span>

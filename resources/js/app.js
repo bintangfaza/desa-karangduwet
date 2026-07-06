@@ -1,5 +1,7 @@
 import 'bootstrap';
 import './dashboard';
+import './chart';
+import './dashboard-counter';
 
 // SweetAlert
 import Swal from 'sweetalert2';

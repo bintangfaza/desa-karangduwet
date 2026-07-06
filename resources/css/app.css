@@ -7,7 +7,6 @@
 @import "./utilities.css";
 
 @import "./auth.css";
-@import "./frontend.css";
 
 /* Dashboard Layout */
 @import "./dashboard/sidebar.css";
@@ -17,11 +16,19 @@
 @import "./dashboard/responsive.css";
 @import './dashboard/potensi.css';
 @import "./dashboard/admin.css";
+@import "./dashboard/dashboard.css";
 
 /* Britan Admin */
 @import "./dashboard/berita.css";
 @import "./dashboard/berita-form.css";
 @import "./dashboard/proker.css";
+
+/* Dashboard*/
+@import "./dashboard/activity.css";
+@import "./dashboard/chart.css";
+@import "./dashboard/statistics.css";
+@import "./dashboard/welcome.css";
+@import "./dashboard/quick-action.css";
 
 /* ==========================
     LOGIN PAGE

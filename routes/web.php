@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\BeritaController;
 use App\Http\Controllers\Admin\PotensiDesaController;
 use App\Http\Controllers\Admin\KategoriPotensiController;
@@ -30,9 +31,8 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', function () {
-        return view('admin.dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [DashboardController::class, 'index'])
+    ->name('dashboard');
 
     Route::post('/logout', [AuthController::class, 'destroy'])
         ->name('logout');
