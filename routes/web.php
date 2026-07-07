@@ -17,7 +17,7 @@ use App\Http\Controllers\Admin\ProgramKerjaController;
 
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.home');
 });
 
 //Login
@@ -32,7 +32,7 @@ Route::middleware('guest')->group(function () {
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])
-    ->name('dashboard');
+        ->name('dashboard');
 
     Route::post('/logout', [AuthController::class, 'destroy'])
         ->name('logout');
@@ -76,9 +76,9 @@ Route::middleware('auth')->group(function () {
         'anggota-kkn',
         AnggotaKknController::class
     );
-    
+
     Route::resource(
-    'anggota-kkn.program-kerja',
-    ProgramKerjaController::class
-);
+        'anggota-kkn.program-kerja',
+        ProgramKerjaController::class
+    );
 });

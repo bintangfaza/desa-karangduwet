@@ -2,6 +2,7 @@ import 'bootstrap';
 import './dashboard';
 import './chart';
 import './dashboard-counter';
+import './frontend';
 
 // SweetAlert
 import Swal from 'sweetalert2';

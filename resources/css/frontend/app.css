@@ -1,11 +1,69 @@
-:root{
+@import "./navbar.css";
+@import "./hero.css";
+@import "./profile.css";
+@import "./map.css";
+@import "./potensi.css";
+@import "./produk.css";
+@import "./galeri.css";
+@import "./kkn.css";
+@import "./footer.css";
+@import "./responsive.css";
 
-    --primary:#198754;
-    --primary-dark:#146c43;
-    --secondary:#f8f9fa;
-    --text:#2d3436;
-    --border:#e9ecef;
-    --radius:20px;
-    --shadow:0 8px 25px rgba(0,0,0,.08);
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 
+:root {
+    --primary: #2F8F46;
+    --primary-dark: #1F6B38;
+    --accent: #F57C2E;
+    --yellow: #F6C324;
+    --bg: #F8FAF5;
+    --text: #233042;
+    --radius: 22px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+section {
+    padding: 90px 0;
+}
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+::selection {
+    background: var(--primary);
+    color: white;
 }

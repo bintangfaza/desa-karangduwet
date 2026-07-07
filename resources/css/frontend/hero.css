@@ -1,0 +1,528 @@
+/* ======================================================
+   HERO
+====================================================== */
+.frontend-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 130px;
+    padding-bottom: 40px;
+    background:
+        linear-gradient(135deg,
+            #f7fbf6 0%,
+            #eef8ef 50%,
+            #fdfdfd 100%);
+}
+
+/* Blob Background */
+
+.frontend-hero::before {
+    content: "";
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    right: -220px;
+    top: -180px;
+    border-radius: 50%;
+    background: rgba(63, 125, 88, .08);
+    filter: blur(40px);
+}
+
+.frontend-hero::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    left: -120px;
+    bottom: -120px;
+    border-radius: 50%;
+    background: rgba(242, 140, 40, .08);
+    filter: blur(35px);
+}
+
+/* ======================================================
+   WRAPPER
+====================================================== */
+
+.frontend-hero-wrapper {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+/* ======================================================
+   CONTENT
+====================================================== */
+
+.frontend-hero-content {
+    max-width: 560px;
+}
+
+.frontend-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    background: #eaf6ee;
+    color: #3F7D58;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.frontend-hero-content h1 {
+    font-size: 60px;
+    line-height: 1.15;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 24px;
+}
+
+.frontend-hero-content h1 span {
+    color: #3F7D58;
+}
+
+.frontend-hero-content p {
+    font-size: 18px;
+    line-height: 1.9;
+    color: #64748b;
+    margin-bottom: 40px;
+}
+
+/* ======================================================
+   BUTTON
+====================================================== */
+
+.frontend-hero-button {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.frontend-hero-button a {
+    text-decoration: none;
+}
+
+.btn-primary {
+    padding: 16px 32px;
+    border-radius: 999px;
+    background: #3F7D58;
+    color: #fff;
+    font-weight: 700;
+    transition: .35s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-4px);
+    background: #2d6547;
+    color: white;
+    box-shadow: 0 15px 35px rgba(63, 125, 88, .28);
+}
+
+.btn-outline {
+    padding: 16px 32px;
+    border-radius: 999px;
+    border: 2px solid #dbe7de;
+    color: #1f2937;
+    font-weight: 700;
+    transition: .35s;
+    background: white;
+}
+
+.btn-outline:hover {
+    background: #f4faf5;
+    transform: translateY(-4px);
+}
+
+/* ======================================================
+   IMAGE
+====================================================== */
+
+.frontend-hero-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frontend-image-card {
+    width: 520px;
+    height: 520px;
+    border-radius: 38% 62% 58% 42% / 44% 40% 60% 56%;
+    overflow: hidden;
+    background: white;
+    padding: 14px;
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, .08);
+    animation: heroFloat 7s ease-in-out infinite;
+}
+
+.frontend-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+/* ======================================================
+   FLOAT
+====================================================== */
+
+@keyframes heroFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   FLOATING CARD
+========================================== */
+
+.frontend-floating-card {
+
+    position: absolute;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px 22px;
+
+    min-width: 190px;
+
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, .72);
+
+    backdrop-filter: blur(18px);
+
+    -webkit-backdrop-filter: blur(18px);
+
+    border: 1px solid rgba(255, 255, 255, .45);
+
+    box-shadow:
+
+        0 18px 40px rgba(0, 0, 0, .08);
+
+    animation: floatCard 5s ease-in-out infinite;
+
+    z-index: 20;
+
+}
+
+.frontend-floating-card small {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+}
+
+.frontend-floating-card h5 {
+
+    margin: 0;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    color: #1f2937;
+
+}
+
+.floating-icon {
+
+    width: 54px;
+
+    height: 54px;
+
+    border-radius: 18px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: #eef8ef;
+
+    font-size: 24px;
+
+}
+
+/* posisi */
+
+.card-top {
+
+    left: -60px;
+
+    top: 80px;
+
+}
+
+.card-bottom {
+
+    right: -70px;
+
+    bottom: 60px;
+
+    animation-delay: 2s;
+
+}
+
+.card-left {
+
+    left: -90px;
+
+    bottom: 110px;
+
+    animation-delay: 1s;
+
+}
+
+/* animasi */
+
+@keyframes floatCard {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+/* ======================================================
+   RESPONSIVE
+====================================================== */
+
+@media(max-width:992px) {
+    .frontend-hero {
+        padding-top: 120px;
+    }
+
+    .frontend-hero-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .frontend-hero-content {
+        max-width: 100%;
+    }
+
+    .frontend-hero-button {
+        justify-content: center;
+    }
+
+    .frontend-image-card {
+        width: 420px;
+        height: 420px;
+        margin-top: 30px;
+    }
+
+    .card-top {
+        left: 0;
+        top: -25px;
+    }
+
+    .card-bottom {
+        right: 0;
+        bottom: -25px;
+    }
+
+    .card-left {
+
+        left: -10px;
+
+        bottom: 90px;
+
+    }
+}
+
+@media(max-width:576px) {
+    .frontend-hero {
+        min-height: auto;
+        padding-top: 120px;
+        padding-bottom: 60px;
+    }
+
+    .frontend-hero-content h1 {
+        font-size: 38px;
+    }
+
+    .frontend-hero-content p {
+        font-size: 16px;
+    }
+
+    .frontend-image-card {
+        width: 300px;
+        height: 300px;
+    }
+
+    .frontend-hero-button {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+    .frontend-floating-card {
+        transform: scale(.82);
+    }
+
+    .card-top {
+        left: -5px;
+    }
+
+    .card-bottom {
+        right: -5px;
+    }
+
+    .card-left {
+        left: -10px;
+        bottom: 75px;
+    }
+}
+
+/* ==========================================
+   HERO ANIMATION
+========================================== */
+
+.frontend-badge {
+    animation: fadeUp .6s ease forwards;
+}
+
+.frontend-hero-content h1 {
+    opacity: 0;
+    animation: fadeUp .8s ease forwards;
+    animation-delay: .2s;
+}
+
+.frontend-hero-content p {
+    opacity: 0;
+    animation: fadeUp .8s ease forwards;
+    animation-delay: .4s;
+}
+
+.frontend-hero-button {
+    opacity: 0;
+    animation: fadeUp .8s ease forwards;
+    animation-delay: .6s;
+}
+
+.frontend-image-card {
+    opacity: 0;
+    animation:
+        fadeScale .9s ease forwards,
+        heroFloat 7s ease-in-out infinite 1s;
+}
+
+.frontend-floating-card {
+    opacity: 0;
+    animation:
+        fadeUp .8s ease forwards,
+        floatCard 5s ease-in-out infinite 1.2s;
+}
+
+/* fade */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeScale {
+    from {
+        opacity: 0;
+        transform: scale(.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ==========================================
+   LEAF
+========================================== */
+
+.frontend-leaf {
+    position: absolute;
+    color: #3F7D58;
+    opacity: .08;
+    z-index: 1;
+    animation: leafFloat 8s ease-in-out infinite;
+}
+
+.leaf-1 {
+    font-size: 90px;
+    left: 80px;
+    top: 140px;
+}
+
+.leaf-2 {
+    font-size: 70px;
+    right: 120px;
+    bottom: 140px;
+    animation-delay: 2s;
+}
+
+.leaf-3 {
+    font-size: 55px;
+    left: 45%;
+    bottom: 80px;
+    animation-delay: 4s;
+}
+
+@keyframes leafFloat {
+    0% {
+        transform: translateY(0) rotate(0);
+    }
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}

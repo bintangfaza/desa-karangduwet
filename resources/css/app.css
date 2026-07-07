@@ -30,6 +30,9 @@
 @import "./dashboard/welcome.css";
 @import "./dashboard/quick-action.css";
 
+/* FrontEnd */
+@import "./frontend/app.css";
+
 /* ==========================
     LOGIN PAGE
 =========================== */

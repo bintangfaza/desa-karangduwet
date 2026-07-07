@@ -1,47 +1,23 @@
 @extends('frontend.layouts.app')
 
-@section('title','Beranda')
+@section('title','Website Desa Karangduwet')
 
 @section('content')
 
-{{-- Hero --}}
-<section id="hero">
+@include('frontend.partials.hero')
 
-</section>
+@include('frontend.partials.profile')
 
-{{-- Statistik --}}
-<section id="statistik">
+{{-- @include('frontend.partials.map') --}}
 
-</section>
+{{-- @include('frontend.partials.potensi') --}}
 
-{{-- Profil --}}
-<section id="profil">
+{{-- @include('frontend.partials.produk') --}}
 
-</section>
+{{-- @include('frontend.partials.galeri') --}}
 
-{{-- Peta --}}
-<section id="peta">
+{{-- @include('frontend.partials.berita') --}}
 
-</section>
-
-{{-- Galeri --}}
-<section id="galeri">
-
-</section>
-
-{{-- Potensi --}}
-<section id="potensi">
-
-</section>
-
-{{-- Produk --}}
-<section id="produk">
-
-</section>
-
-{{-- Berita --}}
-<section id="berita">
-
-</section>
+{{-- @include('frontend.partials.kkn') --}}
 
 @endsection
