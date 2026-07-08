@@ -1,0 +1,291 @@
+/* =========================================
+   MAP SECTION
+========================================= */
+
+.frontend-map {
+    padding: 120px 0;
+    background: #ffffff;
+    position: relative;
+}
+
+.frontend-map-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.frontend-map-content {
+    max-width: 550px;
+}
+
+.frontend-map-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: #eef8ef;
+    color: #3F7D58;
+    font-weight: 700;
+    margin-bottom: 22px;
+    animation: badgeFloat 4s ease-in-out infinite;
+}
+
+@keyframes badgeFloat {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.frontend-map-view:hover{
+
+    filter:drop-shadow(0 25px 50px rgba(0,0,0,.12));
+
+}
+
+.frontend-map-content h2 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1f2937;
+    margin-bottom: 22px;
+    line-height: 1.2;
+}
+
+.frontend-map-content h2 span {
+    color: #3F7D58;
+}
+
+.frontend-map-content p {
+    color: #64748b;
+    font-size: 17px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.frontend-map-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 28px;
+    background: #3F7D58;
+    color: #fff;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: .35s;
+}
+
+.frontend-map-button:hover {
+    color: white;
+    background: #2b6447;
+    transform: translateY(-3px);
+    box-shadow: 0 18px 35px rgba(63, 125, 88, .25);
+}
+
+/* =========================================
+   INFO CARD
+========================================= */
+
+.frontend-location-info {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.frontend-location-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .06);
+    transition: .35s;
+}
+
+.frontend-location-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .08);
+}
+
+.frontend-location-card i {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: #eef8ef;
+    color: #3F7D58;
+    font-size: 22px;
+}
+
+.frontend-location-card h5 {
+    margin: 0;
+    font-size: 15px;
+    color: #64748b;
+}
+
+.frontend-location-card span {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+/* =========================================
+   MAP
+========================================= */
+
+.frontend-map-view {
+    position: relative;
+}
+
+.frontend-map-view iframe {
+    width: 100%;
+    height: 520px;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 25px 55px rgba(0, 0, 0, .10);
+}
+
+/* =========================================
+   FLOATING CARD
+========================================= */
+
+.frontend-map-floating {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    background: rgba(255, 255, 255, .90);
+    backdrop-filter: blur(16px);
+    border-radius: 22px;
+    padding: 16px 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .12);
+}
+
+.frontend-map-floating i {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+    background: #3F7D58;
+    color: white;
+    font-size: 22px;
+}
+
+.frontend-map-floating strong {
+    display: block;
+    color: #1f2937;
+}
+
+.frontend-map-floating small {
+    color: #64748b;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:992px) {
+
+    .frontend-map {
+        padding: 100px 0;
+    }
+
+    .frontend-map-wrapper {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .frontend-map-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .frontend-map-button {
+        margin: auto;
+    }
+
+    .frontend-location-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:576px) {
+    .frontend-map-content h2 {
+        font-size: 34px;
+    }
+
+    .frontend-map-content p {
+        font-size: 16px;
+    }
+
+    .frontend-location-info {
+        grid-template-columns: 1fr;
+    }
+
+    .frontend-map-view iframe {
+        height: 380px;
+    }
+
+    .frontend-map-floating {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+/* =====================================
+   MAP HOVER
+===================================== */
+
+.frontend-map-view {
+    transition: .45s;
+}
+
+.frontend-map-view iframe {
+    transition: .45s;
+}
+
+.frontend-map-view:hover iframe {
+    transform: scale(1.02);
+}
+
+.frontend-map-floating {
+    transition: .35s;
+}
+
+.frontend-map-view:hover .frontend-map-floating {
+    transform: translateY(-8px);
+}
+
+.frontend-location-card {
+    cursor: default;
+}
+
+.frontend-location-card:hover i {
+    transform: rotate(-10deg) scale(1.15);
+}
+
+.frontend-location-card i {
+    transition: .35s;
+}

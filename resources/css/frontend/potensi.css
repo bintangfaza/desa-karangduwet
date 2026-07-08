@@ -1,0 +1,283 @@
+/* ===========================
+   POTENSI DESA
+=========================== */
+
+.frontend-potensi{
+    padding:110px 0;
+}
+
+.frontend-potensi-header{
+    text-align:center;
+    max-width:760px;
+    margin:auto;
+    margin-bottom:60px;
+}
+
+.frontend-section-badge{
+    display:inline-block;
+    padding:8px 18px;
+    background:#eef8f0;
+    color:#2f7d43;
+    border-radius:30px;
+    font-weight:700;
+    margin-bottom:18px;
+}
+
+.frontend-potensi-header h2{
+    font-size:44px;
+    font-weight:800;
+    margin-bottom:18px;
+}
+
+.frontend-potensi-header h2 span{
+    color:#3F7D58;
+}
+
+.frontend-potensi-header p{
+    color:#64748b;
+    line-height:1.8;
+}
+
+/* ===========================
+GRID
+=========================== */
+
+.frontend-potensi-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:28px;
+
+}
+
+/* ===========================
+CARD
+=========================== */
+
+.frontend-potensi-card{
+
+    background:#fff;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+
+    cursor:pointer;
+
+    display:flex;
+
+    flex-direction:column;
+
+    height:100%;
+
+}
+
+.frontend-potensi-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.12);
+
+}
+
+/* ===========================
+IMAGE
+=========================== */
+
+.frontend-potensi-image{
+
+    width:100%;
+
+    height:250px;
+
+    overflow:hidden;
+
+}
+
+.frontend-potensi-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+}
+
+/* ===========================
+CONTENT
+=========================== */
+
+.frontend-potensi-content{
+
+    padding:28px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    flex:1;
+
+}
+
+.frontend-potensi-content small{
+
+    color:#3F7D58;
+
+    font-weight:700;
+
+    font-size:15px;
+
+    margin-bottom:12px;
+
+}
+
+.frontend-potensi-content h3{
+
+    font-size:34px;
+
+    font-weight:800;
+
+    margin-bottom:16px;
+
+    color:#1e293b;
+
+}
+
+.frontend-potensi-content p{
+
+    color:#64748b;
+
+    line-height:1.8;
+
+    flex:1;
+
+}
+
+/* ===========================
+FOOTER BUTTON
+=========================== */
+
+.frontend-potensi-footer{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.frontend-potensi-more{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:12px 22px;
+
+    border-radius:999px;
+
+    background:#3F7D58;
+
+    color:#fff;
+
+    font-weight:600;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.frontend-potensi-more:hover{
+
+    background:#2f6647;
+
+    color:#fff;
+
+}
+
+/* ===========================
+EMPTY
+=========================== */
+
+.frontend-empty-potensi{
+
+    grid-column:1/-1;
+
+    text-align:center;
+
+    padding:80px;
+
+    border-radius:24px;
+
+    background:white;
+
+}
+
+.frontend-empty-potensi i{
+
+    font-size:70px;
+
+    color:#3F7D58;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:992px){
+
+.frontend-potensi-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.frontend-potensi-header h2{
+
+font-size:36px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.frontend-potensi-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.frontend-potensi-image{
+
+height:220px;
+
+}
+
+.frontend-potensi-content h3{
+
+font-size:28px;
+
+}
+
+.frontend-potensi-footer{
+
+justify-content:center;
+
+}
+
+}

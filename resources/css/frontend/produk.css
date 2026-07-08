@@ -1,0 +1,222 @@
+/* ========================================
+   PRODUK UMKM
+======================================== */
+
+.frontend-produk{
+    padding:120px 0;
+    background:#fff;
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+.frontend-produk-header{
+    text-align:center;
+    max-width:720px;
+    margin:0 auto 60px;
+}
+
+.frontend-produk-header h2{
+    font-size:46px;
+    font-weight:800;
+    margin:18px 0;
+    color:#1f2937;
+}
+
+.frontend-produk-header h2 span{
+    color:#3F7D58;
+}
+
+.frontend-produk-header p{
+    color:#64748b;
+    line-height:1.8;
+}
+
+/* ========================================
+   GRID
+======================================== */
+
+.frontend-produk-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+}
+
+/* ========================================
+   CARD
+======================================== */
+
+.frontend-produk-card{
+    display:flex;
+    flex-direction:column;
+    background:#fff;
+    border-radius:22px;
+    overflow:hidden;
+    text-decoration:none;
+    box-shadow:0 12px 28px rgba(0,0,0,.06);
+    transition:.35s;
+    color:#1f2937;
+}
+
+.frontend-produk-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 20px 45px rgba(0,0,0,.12);
+    color:#1f2937;
+}
+
+/* ========================================
+   IMAGE
+======================================== */
+
+.frontend-produk-image{
+    position:relative;
+    width:100%;
+    height:230px;
+    overflow:hidden;
+}
+
+.frontend-produk-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
+
+/* ========================================
+   BADGE
+======================================== */
+
+.frontend-produk-badge{
+    position:absolute;
+    top:16px;
+    left:16px;
+    background:rgba(63,125,88,.95);
+    color:#fff;
+    padding:8px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:700;
+}
+
+/* ========================================
+   CONTENT
+======================================== */
+
+.frontend-produk-content{
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    padding:24px;
+}
+
+.frontend-produk-content h3{
+    font-size:26px;
+    font-weight:800;
+    margin-bottom:12px;
+}
+
+.frontend-produk-content p{
+    color:#64748b;
+    line-height:1.8;
+    margin-bottom:25px;
+    flex:1;
+}
+
+/* ========================================
+   FOOT CARD
+======================================== */
+
+.frontend-produk-bottom{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-top:1px solid #edf1f4;
+    padding-top:18px;
+}
+
+.frontend-produk-price{
+    color:#3F7D58;
+    font-weight:800;
+    font-size:20px;
+}
+
+.frontend-produk-detail{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:#3F7D58;
+    font-weight:700;
+}
+
+/* ========================================
+   BUTTON
+======================================== */
+
+.frontend-produk-footer{
+    margin-top:35px;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.frontend-produk-more{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 18px;
+    border:2px solid #3F7D58;
+    border-radius:999px;
+    color:#3F7D58;
+    font-weight:700;
+    transition:.3s;
+}
+
+.frontend-produk-more:hover{
+    background:#3F7D58;
+    color:#fff;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:992px){
+
+.frontend-produk-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.frontend-produk-grid{
+display:flex;
+overflow-x:auto;
+gap:18px;
+scroll-snap-type:x mandatory;
+padding-bottom:10px;
+}
+
+.frontend-produk-grid::-webkit-scrollbar{
+display:none;
+}
+
+.frontend-produk-card{
+min-width:290px;
+flex-shrink:0;
+scroll-snap-align:start;
+}
+
+.frontend-produk-header h2{
+font-size:34px;
+}
+
+.frontend-produk-image{
+height:200px;
+}
+
+.frontend-produk-footer{
+justify-content:center;
+}
+}
