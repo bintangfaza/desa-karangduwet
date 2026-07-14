@@ -1,9 +1,16 @@
 <section id="produk" class="frontend-produk">
-
+    <div class="frontend-produk-grid-bg"></div>
+    <div class="produk-bubble bubble1"></div>
+    <div class="produk-bubble bubble2"></div>
+    <div class="produk-bubble bubble3"></div>
+    <div class="produk-bubble bubble4"></div>
+    <div class="produk-bubble bubble5"></div>
+    <div class="produk-ring ring-1"></div>
+    <div class="produk-ring ring-2"></div>
     <div class="container">
 
         {{-- Header --}}
-        <div class="frontend-produk-header">
+        <div class="frontend-produk-header reveal">
 
             <span class="frontend-section-badge">
                 🛍 Produk UMKM
@@ -86,7 +93,7 @@
 
         {{-- Grid Produk --}}
 
-        <div class="frontend-produk-grid">
+        <div class="frontend-produk-grid reveal">
             @foreach($produks as $produk)
             <a href="{{ $produk['slug'] }}" class="frontend-produk-card">
                 <div class="frontend-produk-image">
@@ -111,10 +118,6 @@
                     <div class="frontend-produk-bottom">
                         <span class="frontend-produk-price">
                             {{ $produk['harga'] }}
-                        </span>
-                        <span class="frontend-produk-detail">
-                            Detail
-                            <i class="bi bi-arrow-right"></i>
                         </span>
                     </div>
                 </div>

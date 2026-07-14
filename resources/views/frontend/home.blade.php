@@ -15,8 +15,7 @@
 
 @include('frontend.partials.galeri')
 
-{{-- @include('frontend.partials.berita') --}}
+@include('frontend.partials.berita')
 
-{{-- @include('frontend.partials.kkn') --}}
 
 @endsection

@@ -19,6 +19,9 @@ use App\Http\Controllers\Admin\ProgramKerjaController;
 Route::get('/', function () {
     return view('frontend.home');
 });
+Route::get('/kkn', function () {
+    return view('frontend.kkn');
+})->name('kkn');
 
 //Login
 Route::middleware('guest')->group(function () {

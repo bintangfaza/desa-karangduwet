@@ -2,221 +2,487 @@
    PRODUK UMKM
 ======================================== */
 
-.frontend-produk{
-    padding:120px 0;
-    background:#fff;
+.frontend-produk {
+    position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+    background:
+        linear-gradient(180deg,
+
+            #ffffff,
+
+            #fcfffd,
+
+            #fffdf8);
+
+}
+
+.frontend-produk .container {
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+/* Desain printilan*/
+.frontend-produk::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 520px;
+    height: 520px;
+
+    border-radius: 50%;
+
+    background: rgba(63, 125, 88, .08);
+
+    filter: blur(150px);
+
+    bottom: -240px;
+    right: -220px;
+
+    z-index: 0;
+
+}
+
+.frontend-produk::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 360px;
+    height: 360px;
+
+    border-radius: 50%;
+
+    background: rgba(245, 124, 46, .08);
+
+    filter: blur(120px);
+
+    top: -170px;
+    left: -120px;
+
+}
+
+.produk-ring {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 2px solid rgba(63, 125, 88, .08);
+
+    z-index: 0;
+
+}
+
+.ring-1 {
+
+    width: 260px;
+
+    height: 260px;
+
+    top: 90px;
+
+    right: 4%;
+
+}
+
+.ring-2 {
+
+    width: 170px;
+
+    height: 170px;
+
+    bottom: 90px;
+
+    left: 6%;
+
+    border-color: rgba(245, 124, 46, .10);
+
+}
+
+.frontend-produk-grid-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .18;
+
+    pointer-events: none;
+
+    background-image:
+
+        linear-gradient(rgba(63, 125, 88, .08) 1px,
+            transparent 1px),
+
+        linear-gradient(90deg,
+            rgba(63, 125, 88, .08) 1px,
+            transparent 1px);
+
+    background-size: 42px 42px;
+
+    -webkit-mask-image:
+        radial-gradient(circle at center,
+            black 45%,
+            transparent 90%);
+
+    mask-image:
+        radial-gradient(circle at center,
+            black 45%,
+            transparent 90%);
+
+}
+
+.produk-bubble {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    z-index: 0;
+
+}
+
+.bubble1 {
+
+    width: 18px;
+    height: 18px;
+
+    background: #3F7D58;
+
+    top: 180px;
+    left: 120px;
+
+}
+
+.bubble2 {
+
+    width: 14px;
+    height: 14px;
+
+    background: #F57C2E;
+
+    top: 320px;
+    right: 180px;
+
+}
+
+.bubble3 {
+
+    width: 10px;
+    height: 10px;
+
+    background: #3F7D58;
+
+    bottom: 170px;
+    left: 220px;
+
+}
+
+.bubble4 {
+
+    width: 22px;
+    height: 22px;
+
+    background: #F57C2E;
+
+    bottom: 90px;
+    right: 80px;
+
+}
+
+.bubble5 {
+
+    width: 8px;
+    height: 8px;
+
+    background: #3F7D58;
+
+    top: 120px;
+    right: 340px;
+
+}
+
+.produk-bubble {
+
+    opacity: .45;
+
+}
+
+@keyframes floating {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-12px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.produk-ring {
+
+    animation: floating 12s ease-in-out infinite;
+
+}
+
+.produk-bubble {
+
+    animation: floating 8s ease-in-out infinite;
+
+}
+
+.bubble2 {
+
+    animation-delay: 2s;
+
+}
+
+.bubble3 {
+
+    animation-delay: 4s;
+
+}
+
+.bubble4 {
+
+    animation-delay: 1s;
+
+}
+
+.ring-2 {
+
+    animation-delay: 5s;
+
 }
 
 /* ========================================
    HEADER
 ======================================== */
 
-.frontend-produk-header{
-    text-align:center;
-    max-width:720px;
-    margin:0 auto 60px;
+.frontend-produk-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 60px;
 }
 
-.frontend-produk-header h2{
-    font-size:46px;
-    font-weight:800;
-    margin:18px 0;
-    color:#1f2937;
+.frontend-produk-header h2 {
+    font-size: 46px;
+    font-weight: 800;
+    margin: 18px 0;
+    color: #1f2937;
 }
 
-.frontend-produk-header h2 span{
-    color:#3F7D58;
+.frontend-produk-header h2 span {
+    color: #3F7D58;
 }
 
-.frontend-produk-header p{
-    color:#64748b;
-    line-height:1.8;
+.frontend-produk-header p {
+    color: #64748b;
+    line-height: 1.8;
 }
 
 /* ========================================
    GRID
 ======================================== */
 
-.frontend-produk-grid{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:28px;
+.frontend-produk-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
 }
 
 /* ========================================
    CARD
 ======================================== */
 
-.frontend-produk-card{
-    display:flex;
-    flex-direction:column;
-    background:#fff;
-    border-radius:22px;
-    overflow:hidden;
-    text-decoration:none;
-    box-shadow:0 12px 28px rgba(0,0,0,.06);
-    transition:.35s;
-    color:#1f2937;
+.frontend-produk-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 22px;
+    overflow: hidden;
+    text-decoration: none;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, .06);
+    transition: .35s;
+    color: #1f2937;
 }
 
-.frontend-produk-card:hover{
-    transform:translateY(-6px);
-    box-shadow:0 20px 45px rgba(0,0,0,.12);
-    color:#1f2937;
+.frontend-produk-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .12);
+    color: #1f2937;
 }
 
 /* ========================================
    IMAGE
 ======================================== */
 
-.frontend-produk-image{
-    position:relative;
-    width:100%;
-    height:230px;
-    overflow:hidden;
+.frontend-produk-image {
+    position: relative;
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
 }
 
-.frontend-produk-image img{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    display:block;
+.frontend-produk-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* ========================================
    BADGE
 ======================================== */
 
-.frontend-produk-badge{
-    position:absolute;
-    top:16px;
-    left:16px;
-    background:rgba(63,125,88,.95);
-    color:#fff;
-    padding:8px 14px;
-    border-radius:999px;
-    font-size:13px;
-    font-weight:700;
+.frontend-produk-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background: rgba(63, 125, 88, .95);
+    color: #fff;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
 }
 
 /* ========================================
    CONTENT
 ======================================== */
 
-.frontend-produk-content{
-    display:flex;
-    flex-direction:column;
-    flex:1;
-    padding:24px;
+.frontend-produk-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 24px;
 }
 
-.frontend-produk-content h3{
-    font-size:26px;
-    font-weight:800;
-    margin-bottom:12px;
+.frontend-produk-content h3 {
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 12px;
 }
 
-.frontend-produk-content p{
-    color:#64748b;
-    line-height:1.8;
-    margin-bottom:25px;
-    flex:1;
+.frontend-produk-content p {
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    flex: 1;
 }
 
 /* ========================================
    FOOT CARD
 ======================================== */
 
-.frontend-produk-bottom{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-top:1px solid #edf1f4;
-    padding-top:18px;
+.frontend-produk-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #edf1f4;
+    padding-top: 18px;
 }
 
-.frontend-produk-price{
-    color:#3F7D58;
-    font-weight:800;
-    font-size:20px;
+.frontend-produk-price {
+    color: #3F7D58;
+    font-weight: 800;
+    font-size: 20px;
 }
 
-.frontend-produk-detail{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    color:#3F7D58;
-    font-weight:700;
+.frontend-produk-detail {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #3F7D58;
+    font-weight: 700;
 }
 
 /* ========================================
    BUTTON
 ======================================== */
 
-.frontend-produk-footer{
-    margin-top:35px;
-    display:flex;
-    justify-content:flex-end;
+.frontend-produk-footer {
+    margin-top: 35px;
+    display: flex;
+    justify-content: flex-end;
 }
 
-.frontend-produk-more{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:10px 18px;
-    border:2px solid #3F7D58;
-    border-radius:999px;
-    color:#3F7D58;
-    font-weight:700;
-    transition:.3s;
+.frontend-produk-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border: 2px solid #3F7D58;
+    border-radius: 999px;
+    color: #3F7D58;
+    font-weight: 700;
+    transition: .3s;
 }
 
-.frontend-produk-more:hover{
-    background:#3F7D58;
-    color:#fff;
+.frontend-produk-more:hover {
+    background: #3F7D58;
+    color: #fff;
 }
 
 /* ========================================
    RESPONSIVE
 ======================================== */
 
-@media(max-width:992px){
+@media(max-width:992px) {
 
-.frontend-produk-grid{
-grid-template-columns:repeat(2,1fr);
+    .frontend-produk-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
-}
+@media(max-width:768px) {
 
-@media(max-width:768px){
+    .frontend-produk-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 18px;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 10px;
+    }
 
-.frontend-produk-grid{
-display:flex;
-overflow-x:auto;
-gap:18px;
-scroll-snap-type:x mandatory;
-padding-bottom:10px;
-}
+    .frontend-produk-grid::-webkit-scrollbar {
+        display: none;
+    }
 
-.frontend-produk-grid::-webkit-scrollbar{
-display:none;
-}
+    .frontend-produk-card {
+        min-width: 290px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
 
-.frontend-produk-card{
-min-width:290px;
-flex-shrink:0;
-scroll-snap-align:start;
-}
+    .frontend-produk-header h2 {
+        font-size: 34px;
+    }
 
-.frontend-produk-header h2{
-font-size:34px;
-}
+    .frontend-produk-image {
+        height: 200px;
+    }
 
-.frontend-produk-image{
-height:200px;
-}
-
-.frontend-produk-footer{
-justify-content:center;
-}
+    .frontend-produk-footer {
+        justify-content: center;
+    }
 }

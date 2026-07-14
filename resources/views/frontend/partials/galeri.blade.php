@@ -1,11 +1,23 @@
 <section id="galeri" class="frontend-gallery">
+    <div class="galeri-blob blob-green"></div>
+    <div class="galeri-blob blob-orange"></div>
 
+    <div class="galeri-frame frame-1"></div>
+    <div class="galeri-frame frame-2"></div>
+    <div class="galeri-frame frame-3"></div>
+
+    <div class="galeri-ring ring-1"></div>
+    <div class="galeri-ring ring-2"></div>
+
+    <div class="galeri-bubble bubble-1"></div>
+    <div class="galeri-bubble bubble-2"></div>
+    <div class="galeri-bubble bubble-3"></div>
     <div class="container">
 
         {{-- ===========================
             HEADER
         ============================ --}}
-        <div class="frontend-gallery-header">
+        <div class="frontend-galeri-header">
 
             <span class="frontend-section-badge">
                 📸 Dokumentasi Desa
@@ -26,30 +38,30 @@
 
         @php
 
-            $albums = [
+        $albums = [
 
-                [
-                    'judul'   => 'Penyambutan Kapanewon',
-                    'cover'   => 'images/galeri/pentas.jpg',
-                    'jumlah'  => 18,
-                    'tanggal' => '12 Juni 2026'
-                ],
+        [
+        'judul' => 'Penyambutan Kapanewon',
+        'cover' => 'images/galeri/pentas.jpg',
+        'jumlah' => 18,
+        'tanggal' => '12 Juni 2026'
+        ],
 
-                [
-                    'judul'   => 'Perayaan 17 Agustus',
-                    'cover'   => 'images/galeri/agustus.jpg',
-                    'jumlah'  => 42,
-                    'tanggal' => '17 Agustus 2026'
-                ],
+        [
+        'judul' => 'Perayaan 17 Agustus',
+        'cover' => 'images/galeri/agustus.jpg',
+        'jumlah' => 42,
+        'tanggal' => '17 Agustus 2026'
+        ],
 
-                [
-                    'judul'   => 'Kerja Bakti Desa',
-                    'cover'   => 'images/galeri/kerjabakti.jpg',
-                    'jumlah'  => 24,
-                    'tanggal' => '8 Mei 2026'
-                ],
+        [
+        'judul' => 'Kerja Bakti Desa',
+        'cover' => 'images/galeri/kerjabakti.jpg',
+        'jumlah' => 24,
+        'tanggal' => '8 Mei 2026'
+        ],
 
-            ];
+        ];
 
         @endphp
 
@@ -61,51 +73,49 @@
 
             @foreach($albums as $album)
 
-                <a href="#" class="frontend-gallery-card">
+            <a href="#" class="frontend-gallery-card">
 
-                    <div class="frontend-gallery-frame">
+                <div class="frontend-gallery-frame">
 
-                        <div class="frontend-gallery-image">
+                    <div class="frontend-gallery-image">
 
-                            <img
-                                src="{{ asset($album['cover']) }}"
-                                alt="{{ $album['judul'] }}">
+                        <img
+                            src="{{ asset($album['cover']) }}"
+                            alt="{{ $album['judul'] }}">
 
-                            {{-- Badge Jumlah Foto --}}
-                            <div class="frontend-gallery-badge">
+                        {{-- Badge Jumlah Foto --}}
+                        <div class="frontend-gallery-badge">
 
-                                <i class="bi bi-images"></i>
+                            <i class="bi bi-images"></i>
 
-                                {{ $album['jumlah'] }} Foto
+                            {{ $album['jumlah'] }} Foto
+
+                        </div>
+
+                        {{-- Overlay --}}
+                        <div class="frontend-gallery-overlay">
+
+                            <div class="frontend-gallery-info">
+
+                                <h3>
+
+                                    {{ $album['judul'] }}
+
+                                </h3>
+
+                                <p>
+
+                                    <i class="bi bi-calendar3"></i>
+
+                                    {{ $album['tanggal'] }}
+
+                                </p>
 
                             </div>
 
-                            {{-- Overlay --}}
-                            <div class="frontend-gallery-overlay">
+                            <div class="frontend-gallery-arrow">
 
-                                <div class="frontend-gallery-info">
-
-                                    <h3>
-
-                                        {{ $album['judul'] }}
-
-                                    </h3>
-
-                                    <p>
-
-                                        <i class="bi bi-calendar3"></i>
-
-                                        {{ $album['tanggal'] }}
-
-                                    </p>
-
-                                </div>
-
-                                <div class="frontend-gallery-arrow">
-
-                                    <i class="bi bi-arrow-right"></i>
-
-                                </div>
+                                <i class="bi bi-arrow-right"></i>
 
                             </div>
 
@@ -113,7 +123,9 @@
 
                     </div>
 
-                </a>
+                </div>
+
+            </a>
 
             @endforeach
 

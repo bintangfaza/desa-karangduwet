@@ -9,11 +9,6 @@
     overflow: hidden;
     padding-top: 130px;
     padding-bottom: 40px;
-    background:
-        linear-gradient(135deg,
-            #f7fbf6 0%,
-            #eef8ef 50%,
-            #fdfdfd 100%);
 }
 
 /* Blob Background */
@@ -39,8 +34,9 @@
     bottom: -120px;
     border-radius: 50%;
     background: rgba(242, 140, 40, .08);
-    filter: blur(35px);
+    filter: blur(15px);
 }
+
 
 /* ======================================================
    WRAPPER

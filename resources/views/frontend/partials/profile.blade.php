@@ -1,4 +1,6 @@
 <section id="profil" class="frontend-profile">
+    <div class="frontend-profile-decoration"></div>
+    <div class="frontend-profile-dots"></div>
     <i class="bi bi-flower1 frontend-leaf-profile leaf-1-profile"></i>
     <i class="bi bi-flower1 frontend-leaf-profile leaf-2-profile"></i>
     <i class="bi bi-flower1 frontend-leaf-profile leaf-3-profile"></i>

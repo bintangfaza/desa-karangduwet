@@ -34,7 +34,7 @@
 
             <a href="#berita" class="frontend-navbar-link">Berita</a>
 
-            <a href="#kkn" class="frontend-navbar-link">Tim KKN</a>
+            <a href="{{ route('kkn') }}" class="frontend-navbar-link">Tentang KKN</a>
 
         </nav>
 

@@ -81,18 +81,18 @@ document.addEventListener("DOMContentLoaded", () => {
 =========================== */
 
 const reveals = document.querySelectorAll(
-    ".reveal, .reveal-left, .reveal-right"
+    ".reveal, .reveal-left, .reveal-right, .reveal-left-ori"
 );
 
-function revealScroll(){
+function revealScroll() {
 
-    reveals.forEach((el)=>{
+    reveals.forEach((el) => {
 
         const top = el.getBoundingClientRect().top;
 
         const trigger = window.innerHeight - 120;
 
-        if(top < trigger){
+        if (top < trigger) {
 
             el.classList.add("active");
 
@@ -105,3 +105,129 @@ function revealScroll(){
 window.addEventListener("scroll", revealScroll);
 
 revealScroll();
+
+//Swiper
+import Swiper from "swiper";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+new Swiper(".teamSwiper", {
+
+    modules: [Navigation, Pagination, Autoplay],
+
+    loop: true,
+
+    speed: 700,
+
+    spaceBetween: 25,
+
+    autoplay: {
+
+        delay: 3500,
+
+        disableOnInteraction: false,
+
+    },
+
+    navigation: {
+
+        nextEl: ".team-next",
+
+        prevEl: ".team-prev",
+
+    },
+
+    pagination: {
+
+        el: ".swiper-pagination",
+
+        clickable: true,
+
+    },
+
+    breakpoints: {
+
+        0: {
+            slidesPerView: 1.2,
+            spaceBetween: 18
+        },
+
+        576: {
+            slidesPerView: 2,
+            spaceBetween: 20
+        },
+
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 24
+        },
+
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 28
+        }
+
+    }
+
+});
+
+//Anggota
+
+const button = document.getElementById("showMoreTeam");
+const grid = document.getElementById("teamGrid");
+
+button.addEventListener("click", function () {
+
+    grid.classList.toggle("show-all");
+    button.classList.toggle("active");
+
+    if (grid.classList.contains("show-all")) {
+
+        button.querySelector("span").innerHTML = "Sembunyikan Tim";
+
+    } else {
+
+        button.querySelector("span").innerHTML = "+ 12 Anggota Lainnya";
+
+    }
+
+});
+
+//Devisi
+
+
+const divisionSlider = document.getElementById("divisionSlider");
+
+const divisionPrev = document.querySelector(".division-prev");
+
+const divisionNext = document.querySelector(".division-next");
+
+divisionNext.addEventListener("click", () => {
+
+    divisionSlider.scrollBy({
+
+        left: 420,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+divisionPrev.addEventListener("click", () => {
+
+    divisionSlider.scrollBy({
+
+        left: -420,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+
+

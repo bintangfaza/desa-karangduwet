@@ -1,5 +1,33 @@
 <section id="peta" class="frontend-map">
+    <div class="frontend-map-circle"></div>
+    <div class="frontend-map-dots"></div>
+    <div class="frontend-map-bubble"></div>
+    <div class="frontend-map-topography">
+        <svg
+            viewBox="0 0 600 400"
+            preserveAspectRatio="none">
 
+            <path d="M10 40
+                 C120 20,180 70,290 45
+                 S480 60,590 40" />
+
+            <path d="M0 90
+                 C120 70,220 120,340 95
+                 S520 110,620 85" />
+
+            <path d="M30 145
+                 C150 120,250 180,360 150
+                 S510 165,620 140" />
+
+            <path d="M0 210
+                 C120 185,220 235,360 205
+                 S520 230,620 200" />
+
+            <path d="M40 285
+                 C170 255,250 310,390 280
+                 S530 300,620 275" />
+        </svg>
+    </div>
     <div class="container">
 
         <div class="frontend-map-wrapper">
@@ -26,8 +54,8 @@
                 </p>
 
                 <a href="#"
-                   class="frontend-map-button"
-                   target="_blank">
+                    class="frontend-map-button"
+                    target="_blank">
                     <i class="bi bi-geo-alt-fill"></i>
                     Buka Google Maps
                 </a>

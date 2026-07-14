@@ -3,9 +3,10 @@
 ========================================= */
 
 .frontend-map {
-    padding: 120px 0;
-    background: #ffffff;
     position: relative;
+    overflow: hidden;
+    padding: 120px 0;
+
 }
 
 .frontend-map-wrapper {
@@ -14,7 +15,117 @@
     gap: 70px;
     align-items: center;
 }
+/* ===========================
+   GREEN BLOB
+=========================== */
 
+.frontend-map::before{
+    content:"";
+    position:absolute;
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    background:rgba(63,125,88,.08);
+    filter:blur(130px);
+    left:-180px;
+    top:-160px;
+    z-index:0;
+}
+.frontend-map::after{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(245,124,46,.07);
+    filter:blur(100px);
+    right:-100px;
+    bottom:-80px;
+    z-index:0;
+}
+.frontend-map-circle{
+    position:absolute;
+    width:260px;
+    height:260px;
+    border-radius:50%;
+    border:2px solid rgba(63,125,88,.08);
+    left:5%;
+    bottom:8%;
+    z-index:0;
+}
+.frontend-map-dots{
+    position:absolute;
+    width:150px;
+    height:150px;
+    top:80px;
+    right:80px;
+    opacity:.30;
+    background-image:
+        radial-gradient(
+            #3F7D58 1.5px,
+            transparent 1.5px
+        );
+    background-size:18px 18px;
+    z-index:0;
+}
+.frontend-map-bubble{
+    position:absolute;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#F59E0B;
+    right:160px;
+    top:180px;
+    opacity:.45;
+    z-index:0;
+}
+.frontend-map .container{
+    position:relative;
+    z-index:2;
+}
+/* ===========================
+TOPOGRAPHY
+=========================== */
+
+.frontend-map-topography{
+
+    position:absolute;
+
+    left:-60px;
+
+    bottom:-30px;
+
+    width:50%;
+
+    height:280px;
+
+    opacity:.22;
+
+    z-index:0;
+
+    pointer-events:none;
+
+}
+
+.frontend-map-topography svg{
+
+    width:100%;
+
+    height:100%;
+
+}
+
+.frontend-map-topography path{
+
+    fill:none;
+
+    stroke:#3F7D58;
+
+    stroke-width:2;
+
+    stroke-linecap:round;
+
+}
 /* =========================================
    CONTENT
 ========================================= */
@@ -40,16 +151,19 @@
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-6px);
     }
+
     100% {
         transform: translateY(0);
     }
 }
-.frontend-map-view:hover{
 
-    filter:drop-shadow(0 25px 50px rgba(0,0,0,.12));
+.frontend-map-view:hover {
+
+    filter: drop-shadow(0 25px 50px rgba(0, 0, 0, .12));
 
 }
 
